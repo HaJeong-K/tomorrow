@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel Data Analysis</title>
+</head>
+<body>
+    <h1>Excel Data Analysis</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="fileInput" />
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+</html>

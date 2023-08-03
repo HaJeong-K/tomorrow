@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+</head>
+<body>
+    <h2>Grade Statistics</h2>
+<table border="1">
+    <tr>
+        <th>Grade</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Average</th>
+    </tr>
+    {% for row in grade_df.iterrows %}
+    <tr>
+        <td>{{ row.1.grade }}</td>
+        <td>{{ row.1.min }}</td>
+        <td>{{ row.1.max }}</td>
+        <td>{{ row.1.avg }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+
+<h2>Email Domain Count</h2>
+<table border="1">
+    <tr>
+        <th>Domain</th>
+        <th>Count</th>
+    </tr>
+    {% for row in email_df.iterrows %}
+    <tr>
+        <td>{{ row.1.domain }}</td>
+        <td>{{ row.1.value }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
